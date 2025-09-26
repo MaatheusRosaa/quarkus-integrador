@@ -32,6 +32,7 @@ public class Usuario {
     private List<Chamado> chamados;
 
     @OneToMany(mappedBy = "responsavel")
+    @JsonIgnore
     private List<HistoricoChamado> historicos;
 
 }

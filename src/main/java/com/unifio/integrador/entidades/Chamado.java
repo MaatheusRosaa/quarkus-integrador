@@ -1,6 +1,7 @@
 package com.unifio.integrador.entidades;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -37,5 +38,6 @@ public class Chamado {
     private Usuario requisitante;
 
     @OneToMany(mappedBy = "chamado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<HistoricoChamado> historicos;
 }

@@ -24,11 +24,9 @@ public class HistoricoChamado {
 
     private LocalDateTime dataHora;
 
-
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "chamado_id", nullable = false)
     private Chamado chamado;
-
 
     @ManyToOne
     @JoinColumn(name = "responsavel_id", nullable = false)
